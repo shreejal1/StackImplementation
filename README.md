@@ -15,3 +15,8 @@ iterative until the user choose to exit (used while condition to iterate).
 Day2:
 Improved the method in Stack. Applied try catch to handle the exception of 
 ArrayIndexOutOfBoundsException. 
+Day2 Continue:
+Learned about queue and implemented it using array.
+The queue is organized in FIFO. Enqueue is the process of adding items in the rear
+and dequeue means releasing the items from front and re-arranging them in the queue.
+PeekFirst is a simple method to view the front item in the queue.
