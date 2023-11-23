@@ -11,3 +11,7 @@ delivers the Overflow/Underflow condition, and the items (if the array has some 
 The test cases aren't hardcoded but lets user to perform themself.
 The following options of (Push/Pop/Peek/Status) is shown and the process is
 iterative until the user choose to exit (used while condition to iterate).
+
+Day2:
+Improved the method in Stack. Applied try catch to handle the exception of 
+ArrayIndexOutOfBoundsException. 
