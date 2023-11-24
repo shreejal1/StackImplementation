@@ -20,3 +20,7 @@ Learned about queue and implemented it using array.
 The queue is organized in FIFO. Enqueue is the process of adding items in the rear
 and dequeue means releasing the items from front and re-arranging them in the queue.
 PeekFirst is a simple method to view the front item in the queue.
+
+Day3:
+Learned about the Binary Tree. Performed the insert events with currently no filters
+(L<R). Checks the null value if inserted -1.
