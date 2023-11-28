@@ -2,36 +2,6 @@ package binaryTree;
 
 import java.util.Scanner;
 
-public class BinaryTree {
-	static Scanner sc;
-	public static void main(String[] args) {
-		sc = new Scanner(System.in);
-		Node root = add();
-		System.out.println("Root item: "+ root.data);
-		
-	}
-
-
-	//function add() using recursion for adding data for left and right nodes
-	static Node add() {
-		Node root = null;
-		System.out.println("Enter a data: ");
-		int data = sc.nextInt();
-
-		if(data == -1) {
-			return null;
-		}
-		root = new Node(data);
-		System.out.println("Enter left item for "+ data);
-		root.left = add();
-
-		System.out.println("Enter right item for "+ data);
-		root.right = add();
-
-		return root;
-	}
-
-}
 
 class Node{
 	//null at initial phase
@@ -39,7 +9,63 @@ class Node{
 	int data;
 
 	//constructor
-	public Node(int data) {
+	Node(int data) {
 		this.data = data;
+		left = right = null;
 	}
+}
+
+public class BinaryTree {
+	Node root;
+	
+	BinaryTree(){
+		Scanner sc = new Scanner(System.in);
+		root = add(sc);
+	}
+
+	//function add() using recursion for adding data for left and right nodes
+	Node add(Scanner sc) {
+		int data = sc.nextInt();
+
+		if(data == -1) {
+			return null;
+		}
+		Node n = new Node(data);
+		n.left = add(sc);
+		n.right = add(sc);
+
+		return n;
+	}
+	
+	void display() {
+//		preorder(root);
+//		inorder(root);
+//		postorder(root);
+		
+	}
+	void preorder(Node root) {
+		if(root == null) {
+			return;
+		}
+		System.out.println(root.data);
+		preorder(root.left);
+		preorder(root.right);
+	}
+	void inorder(Node root) {
+		if(root == null) {
+			return;
+		}
+		inorder(root.left);
+		System.out.println(root.data);
+		inorder(root.right);
+	}
+	void postorder(Node root) {
+		if(root == null) {
+			return;
+		}
+		postorder(root.right);
+		postorder(root.left);
+		System.out.println(root.data);
+	}
+	
 }
